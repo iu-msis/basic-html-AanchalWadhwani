@@ -1,8 +1,53 @@
 
-.body {
+
+body {
   margin: 0px;
+  overflow: auto;
+  min-height: 900px;
 }
 .container {
   margin: 0px;
   align-items: left;
+}
+.link {
+  color: gray;
+}
+.link:hover {
+  color: red;
+}
+h2 {
+  color: dark-gray;
+}
+#button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding : 5px;
+  border-radius: 5px;
+}
+.footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+}
+.header {
+  background-color: gray;
+  font-style: italic;
+  font-family: cursive;
+  margin: 0px;
+  padding: 5px;
+  font-size: small;
+}
+form {
+  border: solid;
+  border-radius: 2px;
+  border-width: thin;
+  border-style: dotted;
+  border-color: gray;
+  padding: 10px;
+  padding-bottom: 10px;
 }

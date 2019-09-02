@@ -4,8 +4,13 @@
   <title>Books</title>
   <link rel="stylesheet" href="C:\Users\AANCHAL\Documents\GitHub\basic-html-AanchalWadhwani\css\style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="header">
+    <h1>Aanchal Wadhwani</h1>
+  </div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Aanchal</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,9 +31,7 @@
     </div>
   </nav>
   <div class="container">
-  <header>
-    <h1>Books</h1>
-  </header>
+    <h2>Books</h2>
   <table class="table">
   <thead class="thead-light">
     <tr>
@@ -75,36 +78,43 @@
     </tr>
   </tbody>
 </table>
-<h1>Fill the below details to add more books</h1>
+<h2>Fill the below details to add more books</h2>
 <form>
-  <div class="form-group">
-    <label for="Title">Title</label>
-    <input type="text" class="form-control" placeholder="Enter Title">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="Title">Title</label>
+      <input type="text" class="form-control" placeholder="Enter Title">
     </div>
-  <div class="form-group">
-    <label for="Author">Author</label>
-    <input type="text" class="form-control" placeholder="Enter Author">
+    <div class="form-group col-md-6">
+      <label for="Author">Author</label>
+      <input type="text" class="form-control" placeholder="Enter Author">
+    </div>
   </div>
-  <div class="form-group">
-    <label for="Year_Published">Year Published</label>
-    <input type="number" class="form-control" placeholder="Enter Year Published">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="Year_Published">Year Published</label>
+      <input type="number" class="form-control" placeholder="Enter Year Published">
+    </div>
+    <div class="form-group col-md-8">
+      <label for="Publisher">Publisher</label>
+      <input type="text" class="form-control" placeholder="Enter Publisher">
+    </div>
   </div>
-  <div class="form-group">
-    <label for="Publisher">Publisher</label>
-    <input type="text" class="form-control" placeholder="Enter Publisher">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="Page_Count">Page Count</label>
+      <input type="number" class="form-control" placeholder="Enter Page Count">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="MSRP">MSRP</label>
+      <input type="number" step="0.01" class="form-control" placeholder="Enter MSRP">
+    </div>
   </div>
-  <div class="form-group">
-    <label for="Page_Count">Page Count</label>
-    <input type="number" class="form-control" placeholder="Enter Page Count">
-  </div>
-  <div class="form-group">
-    <label for="MSRP">MSRP</label>
-    <input type="number" step="0.01" class="form-control" placeholder="Enter MSRP">
-  </div>
-
-  <button type="submit" class="btn btn-primary">Add Book</button>
+  <button id="button" type="submit" class="btn btn-primary">Add Book</button>
 </form>
 </div>
-
+<div class="footer">
+  Thank you for visiting my website
+</div>
 </body>
 </html>
