@@ -5,7 +5,8 @@ Fork and checkout the assignment repository. Make any changes necessary. Commit 
 In Canvas, submit a link to your GitHub repository.
 
 # Requirements
-* Repository should have at least three separate _**substantive**_ commits, showing different stages of progress. Each commit should have a useful message.
+* Repository should have at least three separate _**substantive**_ comm
+its, showing different stages of progress. Each commit should have a useful message.
 
 * Files are organized in a professional way. All publicly visible files, including HTML files, exist in a folder named 'public'. CSS file(s) in a folder named 'css' (i.e., 'public/css'), Javascript files (if any) in a folder named 'js', image files in a folder named 'img', and all other files (if any, e.g., font files) in a folder named 'static'.
 
