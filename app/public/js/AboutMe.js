@@ -17,8 +17,7 @@ var peopleApp = new Vue({
         age: 0
       },
       picture: {
-        large:"",
-        thumbnail:""
+        large:""
       },
       nat:""
     }
