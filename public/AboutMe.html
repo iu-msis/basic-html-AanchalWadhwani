@@ -8,11 +8,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="header">
-    <h1>Aanchal Wadhwani</h1>
-  </div>
+  <div id="peopleApp">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Aanchal</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,25 +28,28 @@
     </div>
   </nav>
   <div class="container">
-    <h2>Some information about me</h2>
+    <h2 v-for="user in users">Meet {{user.name.first}}</h2>
     <div class="card"  style="width: 18rem;">
-      <div class="card-header">
-        <a href="https://i1.wp.com/www.usmagazine.com/wp-content/uploads/2018/04/suits-2.jpg?crop=10px%2C25px%2C627px%2C354px&resize=600%2C338&ssl=1" target="_blank"><img src="img\ProfilePicture.jpg" class="card-img-top" title="https://i1.wp.com/www.usmagazine.com/wp-content/uploads/2018/04/suits-2.jpg?crop=10px%2C25px%2C627px%2C354px&resize=600%2C338&ssl=1" alt="ProfilePicture"></a>
+      <div v-for="user in users" class="card-header">
+        <a v-bind:href="user.picture.large" target="_blank"><img v-bind:src="user.picture.large" class="card-img-top" title="https://randomuser.me" alt="ProfilePicture"></a>
       </div>
       <div class="card-body">
-        <p class="card-text">Source: Sarah-rafferty. Suits Season 2 retrieved from<a href="https://i1.wp.com/www.usmagazine.com/wp-content/uploads/2018/04/suits-2.jpg?crop=10px%2C25px%2C627px%2C354px&resize=600%2C338&ssl=1">https://i1.wp.com/www.usmagazine.com/wp-content/uploads/2018/04/suits-2.jpg?crop=10px%2C25px%2C627px%2C354px&resize=600%2C338&ssl=1</a></p>
+        <p class="card-text">Source: Random user retrieved from<a href="https://randomuser.me">https://randomuser.me</a></p>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Name: Aanchal Wadhwani</li>
-        <li class="list-group-item">Country: India</li>
-        <li class="list-group-item">Birthdate: April 1, 2018</li>
-        <li class="list-group-item">Age: 1 year</li>
-        <li class="list-group-item">Email: <a class="link" href="mailto:donnasuits@gmail.com">donnasuits@gmail.com</a></li>
+      <ul v-for="user in users" class="list-group list-group-flush">
+        <li class="list-group-item">Name: {{user.name.first}}  {{user.name.last}}</li>
+        <li class="list-group-item">Country: {{user.nat}}</li>
+        <li class="list-group-item">Birthdate: {{user.dob.date}}</li>
+        <li class="list-group-item">Age: {{user.dob.age}}</li>
+        <li class="list-group-item">Email: <a class="link" v-bind:href="'mailto:'+ user.email">{{user.email}}</a></li>
       </ul>
     </div>
 </div>
 <div class="footer">
   Thank you for visiting my website
 </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js\AboutMe.js"></script>
 </body>
 </html>

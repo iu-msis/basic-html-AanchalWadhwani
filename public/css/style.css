@@ -3,7 +3,7 @@
 body {
   margin: 0px;
   overflow: auto;
-  min-height: 900px;
+  min-height: 850px;
 }
 .container {
   margin: 0px;
@@ -17,6 +17,9 @@ body {
 }
 h2 {
   color: dark-gray;
+}
+h3 {
+  color: light-gray;
 }
 #button {
   background-color: black;
