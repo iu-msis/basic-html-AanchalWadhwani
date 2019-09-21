@@ -44,6 +44,9 @@
         <li class="list-group-item">Email: <a class="link" v-bind:href="'mailto:'+ user.email">{{user.email}}</a></li>
       </ul>
     </div>
+    <form class="buttonform" v-on:submit.prevent="fetchUsers">
+      <button id="button" type="submit" class="btn btn-primary">Refresh</button>
+    </form>
 </div>
 <div class="footer">
   Thank you for visiting my website
